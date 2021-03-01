@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        display: block;
+      }
+      header .head {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 71px;
+        border: 1px solid red;
+      }
+      .head .one1 {
+        text-align: center;
+        line-height: 71px;
+        color: #f0522e;
+        font-weight: 500;
+      }
+      .head .two2 {
+        position: absolute;
+        top: 100%;
+        margin-top: -5px;
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+        padding-bottom: 5px;
+        background-color: #f0522e;
+      }
+      .main1 {
+        border: 1px solid red;
+        height: 105px;
+        margin-top: 18px;
+
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+      }
+      .main1 .one {
+        font-size: 1.8em;
+        margin-left: 35px;
+      }
+      .main1 .two {
+        color: #666666;
+        margin-left: 63px;
+      }
+      .main1 .three {
+        color: #666666;
+        padding: 30px 100px;
+      }
+      .me {
+        visibility: hidden;
+        border: 1px solid red;
+        margin-top: 18px;
+      }
+      .me .test {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+      .test .test2 {
+        font-size: 1.8em;
+      }
+      .test .test3 {
+        margin-left: -60px;
+        background-color: #f0522e;
+        color: #fef9f7;
+        line-height: 35px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      body {
+        background-color: #e0e0e0;
+      }
+      .global {
+        height: 100vh;
+        background-color: #ffffff;
+        max-width: 580px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="global">
+      <header>
+        <div class="head">
+          <div class="one1">年度摘要报告</div>
+          <div class="two2"></div>
+        </div>
+      </header>
+      <main class="me" id="test5">
+        <div class="test" id="test1">
+          <div class="test2">2012年</div>
+          <div class="test3">
+            <a>演示材料：Powerpoint</a>
+            <a>新闻发布：英文版|中文版</a>
+            <a>视频广播：Windows Media Player</a>
+          </div>
+        </div>
+      </main>
+      <main class="main1" id="main1">
+        <div class="one">2010年</div>
+        <div class="two">2010年年度报告摘要</div>
+        <div class="three" id="three3">查看</div>
+      </main>
+    </div>
+  </body>
+  <script>
+    var three1 = document.getElementById("three3");
+    var main1 = document.getElementById("main1");
+    var test1 = document.getElementById("test1");
+    three1.onmouseover = () => {
+      console.log("运行成功");
+      console.log(three1.innerText);
+      console.log(three1.innerHTML);
+      test5.style.visibility = "visible";
+    };
+    three1.onmouseleave = () => {
+      console.log(11);
+      test5.style.visibility = "hidden";
+    };
+  </script>
+</html>
